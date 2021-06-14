@@ -28,11 +28,17 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
+
+  counter1 will repeat the function being used and the the total while counter2 will show the number and will increament by one every time it will be used again.
   
   2. Which of the two uses a closure? How can you tell?
+
+  Firstly, closures give us the ability to put functions together. and secondly accessing functions from a parent level scope even after the parent funnction has been terminated. Example: below in the example the counterMaker is being accessed from the parent and being used.
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+
+     Counter1 would be good for repeating the function again and showing the whole function. while counter2 would be better at giving the number of the counterMaker and repeating it every time when needed so that the icreament keeps adding by one. 
 */
 
 // counter1 code
@@ -64,6 +70,7 @@ NOTE: This will be a callback function for the tasks below
 
 function inning(/*Code Here*/){
     /*Code Here*/
+    return Math.floor(Math.random() * 3);
 }
 
 
@@ -80,9 +87,24 @@ Use the finalScore function below to do the following:
   "Away": 5
 }
 */ 
-
-function finalScore(/*code Here*/){
+function baseballGame(inningsCB){
+  return{
+    Home:inningsCB(),
+    Away: inningsCB()
+  }
+}
+function finalScore(inningsCB, number){
   /*Code Here*/
+    let totalGame = [];
+    let homeInnings = 0;
+    let awayInnings = 0;
+    for(let i = 0; i < 9; i++){
+      const currentscore = number(inningsCB);
+      homeInnings = homeInnings + currentscore.Home
+      awayInnings = awayInnings + currentscore.Away
+      totalGame.push();
+    }
+    return totalGame;
 }
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
