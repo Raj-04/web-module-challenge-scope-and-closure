@@ -164,7 +164,7 @@ Use the scoreboard function below to do the following:
 function scoreboard(getInningScoreCB, inningCB, Number) {
   /* CODE HERE */
   for (let i = 0; i < Number; i++){
-    
+      
   }
 
 }
