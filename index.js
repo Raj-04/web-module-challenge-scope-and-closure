@@ -87,25 +87,24 @@ Use the finalScore function below to do the following:
   "Away": 5
 }
 */ 
-function baseballGame(inningsCB){
-  return{
-    Home:inningsCB(),
-    Away: inningsCB()
-  }
-}
-function finalScore(inningsCB, number){
+
+function finalScore(inningsCB, Number){
   /*Code Here*/
-    let totalGame = [];
-    let homeInnings = 0;
-    let awayInnings = 0;
-    for(let i = 0; i < 9; i++){
-      const currentscore = number(inningsCB);
-      homeInnings = homeInnings + currentscore.Home
-      awayInnings = awayInnings + currentscore.Away
-      totalGame.push();
-    }
-    return totalGame;
-}
+  let homeScore = 0;
+  let awayScore = 0;
+  // let currentScore = {};
+  for(let i = 0; i < Number; i++){
+    // currentScore = {
+    //   Home: inningsCB(),
+    //   Away: inningsCB()
+
+    // }
+    homeScore += inningsCB(),
+    awayScore += inningsCB();
+  }
+  return {Home: homeScore, Away: awayScore};
+  }
+  
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
 Use the getInningScore() function below to do the following:
